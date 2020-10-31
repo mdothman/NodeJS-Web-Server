@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-web-server",
+  "version": "1.0.0",
+  "description": "I wanted to get a general understanding of how Node js web server worked, so I could improve the performance of my applications.",
+  "main": "index.js",
+  "scripts": {
+    "add": "node add.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdothman/NodeJS-Web-Server.git"
+  },
+  "keywords": [
+    "Tutorial",
+    "Node",
+    "Web",
+    "Server"
+  ],
+  "author": "mdothman@github",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdothman/NodeJS-Web-Server/issues"
+  },
+  "homepage": "https://github.com/mdothman/NodeJS-Web-Server#readme",
+  "dependencies": {
+    "formidable": "^1.2.2"
+  }
+}
