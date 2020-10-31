@@ -4,7 +4,7 @@
   "description": "I wanted to get a general understanding of how Node js web server worked, so I could improve the performance of my applications.",
   "main": "index.js",
   "scripts": {
-    "add":"node add.js",
+    "add": "node add.js",
     "test": "jest"
   },
   "repository": {
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/mdothman/NodeJS-Web-Server/issues"
   },
-  "homepage": "https://github.com/mdothman/NodeJS-Web-Server#readme"
+  "homepage": "https://github.com/mdothman/NodeJS-Web-Server#readme",
+  "dependencies": {
+    "formidable": "^1.2.2"
+  }
 }
