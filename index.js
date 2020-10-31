@@ -17,6 +17,7 @@ let path = url.parse(req.url, true);
 
 res.writeHead(200,"OK", {"Content-Type":"text/plain"});
 res.write("The Response\n\n");
+res.write(util.inspect(path.query)+"\n\n")
 res.end("end of Message to Browser");
 
 
