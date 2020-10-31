@@ -6,8 +6,8 @@ const formidable = require("formidable")
 const PORT = 3005
 
 const server = http.createServer((req,res)=>{
-console.log(http.METHODS)
-  
+// console.log(http.METHODS);
+console.log(http.STATUS_CODES);  
     
 })
 
