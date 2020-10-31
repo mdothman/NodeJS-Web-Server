@@ -15,11 +15,21 @@ let path = url.parse(req.url, true);
 // The only values that will be retrieved in path are:
 // path.pathname path.search path.query query string object
 
-res.writeHead(200,"OK", {"Content-Type":"text/plain"});
-res.write("The Response\n\n");
-res.write(util.inspect(path.query)+"\n\n")
-res.end("end of Message to Browser");
+let decoder = new StringDecoder('utf-8');
+let buffer = '';
 
+req.on('data', function(chunk){
+    buffer += decoder.write(chunk);
+})
+
+req.on('end', function(){
+    buffer += decoder.end();
+    res.writeHead(200,"OK", {"Content-Type":"text/plain"});
+    res.write("The Response\n\n");
+    res.write(util.inspect(path.query)+"\n\n");
+    res.write(buffer + "\n\n")
+    res.end("end of Message to Browser");
+})
 
 })
 
